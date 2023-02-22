@@ -47,7 +47,7 @@ namespace HighLowNumberGuessingGame
                 }
                 else if (userGuess == randomNumber)
                 {
-                    Console.WriteLine("You guessed the number! It took you " + numberOfTries);
+                    Console.WriteLine("You guessed the number! It took you " + numberOfTries + " tries!");
                     finish = false;
                 }
             }           
