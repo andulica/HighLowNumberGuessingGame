@@ -8,7 +8,7 @@
             Random rand = new Random();
           
             int numberOfTries = 0;
-            
+            int closeGuess = 0;
             bool finish = true;
             int randomNumber = rand.Next(0, 101); // Choose a random number 1 to 100
 
@@ -22,13 +22,25 @@
                 {
                     Console.WriteLine("Your guess is too low. Please try again: ");
                     numberOfTries++;
-                    
+
+                    // In the case that the player guess is <= 5 , will print "You are close!"
+                    closeGuess = randomNumber - userGuess;
+                    if (closeGuess <= 5 )
+                    {
+                        Console.WriteLine("You are close!");
+                    }
                 }
                 else if (userGuess > randomNumber)
                 {
                     Console.WriteLine("Your guess is too high. Please try again: ");
                     numberOfTries++;
-                    
+
+                    // In the case that the player guess is <= 5 , will print "You are close!"
+                    closeGuess = userGuess - randomNumber;
+                    if (closeGuess <= 5)
+                    {
+                        Console.WriteLine("You are close!");
+                    }
                 }
                 else if (MAX_NUMBER_OF_TRIES == numberOfTries)
                 {
