@@ -1,0 +1,1 @@
+Basic game of guessing the number build in a console app. It keeps track of how many tries it took for you to guess the number. Simply download the zip repository and open it in visual studio and you are good to go.
